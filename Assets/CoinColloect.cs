@@ -24,9 +24,9 @@ public class CoinColloect : MonoBehaviour
 
   
        private void OnTriggerEnter(Collider other) {
-        if(other.gameObject.TryGetComponent<MovingPlayer>(out var movingPlayer)){  // accses our player in this mothe >  so we can update coins got and deleting the coin
-         movingPlayer.money++;
-         Debug.Log("Coins :  " + movingPlayer.money);
+        if(other.gameObject.TryGetComponent<DojoFPController>(out var movingPlayer)){  // accses our player in this mothe >  so we can update coins got and deleting the coin
+         movingPlayer.money++; // adding +1 whenever coin destroyed 
+         Debug.Log("Coins :  " + movingPlayer.money); 
          Destroy(gameObject); // Destroyed!! coin
         }
         
