@@ -13,14 +13,15 @@ public class DojoFPController : MonoBehaviour
     [SerializeField] private float lookUpClamp;
     [SerializeField] private float lookDownClamp;
     //movement
-    [SerializeField] private float playerSpeed;
-    [SerializeField] private float PlayerRunSpeed;
+    public float playerSpeed;
+    public float PlayerRunSpeed;
     public int money = 0;
     private CharacterController characterController;
     private Vector3 movement;
 
     void Start()
     {    
+        Cursor.lockState = CursorLockMode.Locked;
         characterController = GetComponent<CharacterController>(); // getting the characterController in our player
         mainCamera = Camera.main; // setting the main cam in this variable
     }
