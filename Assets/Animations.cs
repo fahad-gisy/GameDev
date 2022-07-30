@@ -28,12 +28,12 @@ public class Animations : MonoBehaviour
              animator.SetBool("IsWalkingBack",false);
         }
 
-    //      if(Input.GetKey(KeyCode.D)){
-    //          animator.SetBool("IsWalkingSideR",true);
+         if(Input.GetKey(KeyCode.LeftShift)){
+             animator.SetBool("IsRunning",true);
 
-    //     }else if(Input.GetKeyUp(KeyCode.D)){
-    //          animator.SetBool("IsWalkingSideR",false);
-    //     }
+        }else if(Input.GetKeyUp(KeyCode.LeftShift)){
+             animator.SetBool("IsRunning",false);
+        }
        
     //    if(Input.GetKey(KeyCode.A)){
     //          animator.SetBool("IsWalkingSideL",true);
